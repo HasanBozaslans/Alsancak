@@ -11,7 +11,7 @@ module.exports.execute = async (client, message, args) => {
 
     if (args[0] && args[0].includes("list")) {
         message.guild.fetchBans().then(x => {
-            let siralama = message.channel.send(`${x.size > 0 ? x.map(z => `${z.user.tag.replace("`", "")} - ${z.user.id}`).join("\n") : "BlackSancak Sunucusunda Mevcut Yasaklama Bulunmuyor.."}`);
+            let siralama = message.channel.send(`${x.size > 0 ? x.map(z => `${z.user.tag.replace("`", "")} - ${z.user.id}`).join("\n") : "Alsancak Sunucusunda Mevcut Yasaklama Bulunmuyor.."}`);
                 return siralama;
         });
     };
